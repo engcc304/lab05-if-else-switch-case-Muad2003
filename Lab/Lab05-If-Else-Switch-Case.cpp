@@ -34,15 +34,14 @@
 */
 
 #include <stdio.h>
-
+#include <cctype>
 int main() {
 
     //--| YOUR CODE HERE
     int score ;
     printf( "Enter scrore : " ) ;
-    scanf( "%d" ,&score ) ;
-
-    if( score >= 80 ) {
+    if( scanf( "%d" ,&score ) ==1 ) {
+        if( score >= 80 ) {
         printf( "A" ) ;
     } else if ( score >= 75 && score <= 79 ){
         printf( "B+" ) ;
@@ -58,7 +57,9 @@ int main() {
         printf( "D" ) ;
     } else if ( score <= 49 ){
         printf( "F" ) ;
-    } 
-    
+    }
+    } else {
+        printf( "Numble Only" ) ;
+    }
     return 0 ;
 }//end main function
